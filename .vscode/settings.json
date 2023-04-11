@@ -1,0 +1,10 @@
+{
+  "cSpell.words": [
+    "Coloors"
+  ],
+  "[dart]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true
+  },
+  "dart.lineLength": 80,
+}
