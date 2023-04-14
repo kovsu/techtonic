@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+import 'package:tech_tonic/feature/pages/finds/my_finds.dart';
+import 'package:tech_tonic/feature/pages/forum/my_forum.dart';
 import 'package:tech_tonic/feature/pages/home/my_home.dart';
+import 'package:tech_tonic/feature/pages/publish/my_publish.dart';
 
 class MyPage extends StatefulWidget {
   const MyPage({super.key});
@@ -15,9 +18,9 @@ class _MyPageState extends State<MyPage> {
 
   List allPages = <Widget>[
     const MyHomePage(),
-    const Text('Forum'),
-    const Text('Add'),
-    const Text('Map'),
+    const MyForumPage(),
+    const MyPublishPage(),
+    const MyFindsPage(),
     const Text('People'),
   ];
 

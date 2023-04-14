@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:tech_tonic/common/utils/coloors.dart';
 import 'package:tech_tonic/feature/index.dart';
+import 'package:tech_tonic/feature/pages/login/my_login.dart';
+
+import 'feature/pages/home/my_home.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +22,11 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       title: 'TechTonic',
       debugShowCheckedModeBanner: false,
-      home: const MyPage(),
+      initialRoute: '/login',
+      routes: {
+        '/login': (context) => const MyLoginPage(),
+        '/index': (context) => const MyPage(),
+      },
       theme: ThemeData(
           scaffoldBackgroundColor: Coloors.background, fontFamily: 'Roboto'),
     );

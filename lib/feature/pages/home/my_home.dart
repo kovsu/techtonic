@@ -11,14 +11,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  final List<String> dataList = [
-    'Item 1',
-    'Item 2',
-    'Item 3',
-    'Item 4',
-    'Item 5'
-  ];
-
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -47,7 +39,7 @@ class _MyHomePageState extends State<MyHomePage> {
         const HomeNewsPage(),
         Expanded(
             child: ListView.builder(
-          itemCount: dataList.length,
+          itemCount: 5,
           itemBuilder: (BuildContext context, int index) {
             // final item = dataList[index];
             return HomeCustomCard(

@@ -16,6 +16,8 @@ dependencies:
   curved_navigation_bar: ^1.0.3
   http: ^0.13.4
   carousel_slider: ^4.0.0
+  flutter_quill: ^7.1.4
+  flutter_card_swiper: ^4.1.2
 
 
 flutter_native_splash:
