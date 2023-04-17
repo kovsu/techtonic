@@ -18,7 +18,7 @@ dependencies:
   carousel_slider: ^4.0.0
   flutter_quill: ^7.1.4
   flutter_card_swiper: ^4.1.2
-
+  shared_preferences: ^2.1.0
 
 flutter_native_splash:
   color: '#ffffff'

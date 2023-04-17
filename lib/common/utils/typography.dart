@@ -14,6 +14,11 @@ class CustomTypography {
     fontWeight: FontWeight.w700,
   );
 
+  static const TextStyle h4 = TextStyle(
+    fontSize: 18,
+    fontWeight: FontWeight.w500,
+  );
+
   static const TextStyle outline = TextStyle(
     fontSize: 14,
     color: Colors.grey,

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tech_tonic/common/utils/api.dart';
+import 'package:tech_tonic/common/utils/user.dart';
+import 'dart:convert' as convert;
 
 class MyLoginPage extends StatefulWidget {
   const MyLoginPage({super.key});
@@ -49,6 +51,12 @@ class _MyLoginPageState extends State<MyLoginPage> {
                     onPressed: () async {
                       var res = await Api.login(_email, _password);
                       if (res.statusCode == 200) {
+                        var jsonResponse = convert.jsonDecode(res.body)
+                            as Map<String, dynamic>;
+                        User.username = jsonResponse['data']['username'];
+                        User.email = jsonResponse['data']['email'];
+                        User.id = jsonResponse['data']['id'];
+
                         // ignore: use_build_context_synchronously
                         Navigator.pushNamed(context, '/index');
                       } else {
@@ -102,6 +110,7 @@ class _MyLoginPageState extends State<MyLoginPage> {
                                       );
                                     }
 
+                                    // ignore: use_build_context_synchronously
                                     Navigator.of(context).pop();
                                   },
                                 ),
