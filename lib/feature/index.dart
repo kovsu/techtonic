@@ -3,6 +3,7 @@ import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:tech_tonic/feature/pages/finds/my_finds.dart';
 import 'package:tech_tonic/feature/pages/forum/my_forum.dart';
 import 'package:tech_tonic/feature/pages/home/my_home.dart';
+import 'package:tech_tonic/feature/pages/profile/my_profile.dart';
 import 'package:tech_tonic/feature/pages/publish/my_publish.dart';
 
 class MyPage extends StatefulWidget {
@@ -20,8 +21,7 @@ class _MyPageState extends State<MyPage> {
     const MyHomePage(),
     const MyForumPage(),
     const MyPublishPage(),
-    const MyFindsPage(),
-    const Text('People'),
+    const MyProfile(),
   ];
 
   @override
@@ -40,7 +40,6 @@ class _MyPageState extends State<MyPage> {
           Icon(Icons.home, size: 30, color: Colors.white),
           Icon(Icons.forum, size: 30, color: Colors.white),
           Icon(Icons.add, size: 30, color: Colors.white),
-          Icon(Icons.map, size: 30, color: Colors.white),
           Icon(Icons.people, size: 30, color: Colors.white),
         ],
         height: 60.0,

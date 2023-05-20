@@ -3,11 +3,21 @@ import 'package:tech_tonic/common/utils/typography.dart';
 
 class HomeCustomCard extends StatelessWidget {
   final String title;
+  final String cover;
   final String subtitle;
+  final String username;
+  final String time;
   final VoidCallback? onPressed;
 
-  const HomeCustomCard(
-      {super.key, required this.title, required this.subtitle, this.onPressed});
+  const HomeCustomCard({
+    super.key,
+    required this.title,
+    required this.cover,
+    this.onPressed,
+    required this.subtitle,
+    required this.username,
+    required this.time,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -57,7 +67,7 @@ class HomeCustomCard extends StatelessWidget {
                   ClipRRect(
                       borderRadius: BorderRadius.circular(4.0),
                       child: Image.network(
-                        'https://images.unsplash.com/photo-1681115085351-4c207e8e4ff9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxM3x8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60',
+                        cover,
                         width: 95,
                         height: 64,
                         fit: BoxFit
@@ -66,11 +76,12 @@ class HomeCustomCard extends StatelessWidget {
                   const SizedBox(width: 12),
                   Expanded(
                     child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Row(
-                          children: const [
-                            Text('Konv Suu'),
-                            Text('  1小时前'),
+                          children: [
+                            Text(username),
+                            Text(' $time'),
                           ],
                         ),
                         const SizedBox(height: 8),

@@ -3,9 +3,7 @@ import 'package:tech_tonic/common/utils/coloors.dart';
 import 'package:tech_tonic/feature/index.dart';
 import 'package:tech_tonic/feature/pages/login/my_login.dart';
 
-import 'feature/pages/forum/my_talk.dart';
-
-void main() {
+ void main() {
   runApp(const MyApp());
 }
 

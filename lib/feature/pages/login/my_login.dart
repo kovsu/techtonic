@@ -56,6 +56,7 @@ class _MyLoginPageState extends State<MyLoginPage> {
                         User.username = jsonResponse['data']['username'];
                         User.email = jsonResponse['data']['email'];
                         User.id = jsonResponse['data']['id'];
+                        User.tag = jsonResponse['data']['tag'] ?? '';
 
                         // ignore: use_build_context_synchronously
                         Navigator.pushNamed(context, '/index');
